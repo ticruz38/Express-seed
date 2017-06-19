@@ -9,7 +9,9 @@
         "baseUrl": ".",
         "paths": {
           "login": ["login"],
-          "api": ["api"]
+          "api": ["api"],
+          "renderer": ["renderer"],
+          "graph": ["graph"]
         },
         "jsx": "react"
     },

@@ -3,7 +3,7 @@ import * as cookieParser from 'cookie-parser'
 import * as bodyParser from 'body-parser'
 import * as session from 'express-session'
 import * as passport from 'passport'
-import { mongoConnect } from 'api'
+import { mongoConnect } from '../api'
 
 // strategy
 import { local } from './strategy'

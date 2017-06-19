@@ -1,12 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom/server'
 import { Router } from 'express'
 import { ApolloClient, createNetworkInterface, ApolloProvider, renderToStringWithData } from 'react-apollo'
 import { match, RouterContext } from 'react-router'
 
 //app
-import config from 'config'
-import Html from 'renderer/Html'
+import config from '../config'
+import Html from '../renderer/Html'
 const routes = require(config.Route_URL)
 
 const renderer = Router()
