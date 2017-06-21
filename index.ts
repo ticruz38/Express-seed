@@ -1,12 +1,11 @@
 import * as express from 'express'
 
 // app
-import { mongoConnect } from './api'
-import config from './config'
-import login from './login'
-import graph from './graph'
-import renderer from './renderer'
-const routes = require(config.ROUTE_URL)
+import { mongoConnect } from 'api'
+import config from 'config'
+import login from 'login'
+import graph from 'graph'
+import renderer from 'renderer'
 
 const app = express()
 

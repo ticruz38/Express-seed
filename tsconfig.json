@@ -11,7 +11,8 @@
           "login": ["login"],
           "api": ["api"],
           "renderer": ["renderer"],
-          "graph": ["graph"]
+          "graph": ["graph"],
+          "config": ["config"]
         },
         "jsx": "react"
     },

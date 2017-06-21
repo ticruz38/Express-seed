@@ -1,0 +1,1 @@
+"type Mutation {\n    \n},type Query {\n    \n},schema {\n    query: Query\n    mutation: Mutation\n    subscription: Subscription\n},type Subscription {\n    \n}"

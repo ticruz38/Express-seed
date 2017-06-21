@@ -1,11 +1,15 @@
-import * as glob from 'glob';
-import * as fs from 'fs';
-import * as path from 'path';
+import Subscription from './Subscription';
+import Query from './Query';
+import Mutation from './Mutation';
 
-const schema = glob.sync('graph/schema/**/*.gql')
-    .map( f => fs.readFileSync(f, 'utf8')).join()
+const { makeExecutableSchema } = require('graphql-tools');
+const Schema = require('./schema/Schema.json');
 
-fs.writeFile(path.resolve(__dirname, "Schema.json"), JSON.stringify(schema), err => {
-    if (err) console.log("error", err);
-    process.exit();
+export default makeExecutableSchema({
+    typeDefs: Schema,
+    resolvers: {
+        Query: Query,
+        Mutation: Mutation,
+        Subscription: Subscription
+    }
 });

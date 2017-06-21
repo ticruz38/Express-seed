@@ -4,7 +4,7 @@ import { ApolloClient, createNetworkInterface, ApolloProvider } from 'react-apol
 import { match, RouterContext } from 'react-router'
 
 // app
-import config from '../config'
+import config from 'config'
 const schema = require(config.SCHEMA_URL)
 
 const graphql = Router()
