@@ -7,7 +7,7 @@ import { match, RouterContext } from 'react-router'
 //app
 import config from '../config'
 import Html from '../renderer/Html'
-const routes = require(config.Route_URL)
+const routes = require(config.ROUTE_URL)
 
 const renderer = Router()
 

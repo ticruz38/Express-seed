@@ -1,19 +1,11 @@
 {
     "compilerOptions": {
         "experimentalDecorators": true,
-        "outDir": "./dist/",
+        "outDir": "dist",
         "sourceMap": true,
         "module": "commonjs",
         "moduleResolution": "node",
         "target": "es6",
-        "baseUrl": ".",
-        "paths": {
-          "login": ["login"],
-          "api": ["api"],
-          "renderer": ["renderer"],
-          "graph": ["graph"],
-          "config": ["config"]
-        },
         "jsx": "react"
     },
     "exclude": [

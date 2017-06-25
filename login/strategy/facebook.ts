@@ -1,6 +1,6 @@
 import * as passport from 'passport';
 import { Strategy as FacebookStrategy } from 'passport-facebook'
-import config from 'config';
+import config from '../../config';
 
 
 export default function(req, res, next) {

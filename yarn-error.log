@@ -2,7 +2,7 @@ Arguments:
   /usr/local/Cellar/node/7.9.0/bin/node /usr/local/bin/yarn add @playlife/gql
 
 PATH: 
-  /usr/local/opt/mongodb@3.2/bin:~/bin:/usr/local/bin:/Users/tduchene/.nvm/versions/node/v6.10.2/bin:/usr/local/opt/mongodb@3.2/bin:~/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/bin:/usr/local/go/bin:/Users/tduchene/go/bin
+  /usr/local/opt/mongodb@3.2/bin:~/bin:/usr/local/bin:/Users/tduchene/.nvm/versions/node/v6.10.2/bin:/usr/local/opt/mongodb@3.2/bin:~/bin:/usr/local/bin:/usr/local/opt/mongodb@3.2/bin:~/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/bin:/usr/local/go/bin:/Users/tduchene/go/bin:/usr/local/go/bin:/Users/tduchene/go/bin
 
 Yarn version: 
   0.22.0
@@ -15,52 +15,55 @@ Platform:
 
 npm manifest: 
   {
-      "name": "express",
-      "version": "0.0.0",
-      "description": "an express test",
-      "main": "index.js",
-      "scripts": {
-          "start": "nodemon --exec 'ts-node' index.ts",
-          "buildSchema": "ts-node graph/schema",
-          "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "Ticruz",
-      "license": "ISC",
-      "devDependencies": {
-          "@types/express": "^4.0.36",
-          "@types/graphql": "^0.9.1",
-          "@types/mongodb": "^2.2.4",
-          "@types/passport": "^0.3.3",
-          "@types/passport-facebook": "^2.1.4"
-      },
-      "dependencies": {
-          "@types/body-parser": "^1.16.3",
-          "@types/cookie-parser": "^1.3.30",
-          "@types/express-graphql": "^0.0.33",
-          "@types/express-session": "^1.15.0",
-          "@types/mongodb": "^2.2.4",
-          "@types/react": "^15.0.29",
-          "@types/react-dom": "^15.5.0",
-          "@types/redis": "^2.6.0",
-          "body-parser": "^1.17.2",
-          "cookie-parser": "^1.4.3",
-          "express": "^4.15.3",
-          "express-graphql": "^0.6.6",
-          "express-session": "^1.15.3",
-          "graphql": "^0.10.1",
-          "graphql-tools": "^1.0.0",
-          "mongodb": "^2.2.28",
-          "passport": "^0.3.2",
-          "passport-facebook": "^2.1.1",
-          "passport-local": "^1.0.0",
-          "react": "^15.6.1",
-          "react-apollo": "^1.4.2",
-          "react-dom": "^15.6.1",
-          "react-router": "^4.1.1",
-          "redis": "^2.7.1",
-          "ts-loader": "^2.1.0",
-          "webpack": "^2.6.1"
-      }
+    "name": "express",
+    "version": "0.0.0",
+    "description": "an express test",
+    "main": "index.js",
+    "scripts": {
+      "start": "nodemon --exec npm run buildSchema npm run build npm run start:node",
+      "start:node": "node dist/index.js",
+      "build": "tsc",
+      "buildSchema": "ts-node graph/schema/buildSchema",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Ticruz",
+    "license": "ISC",
+    "devDependencies": {
+      "@types/express": "^4.0.36",
+      "@types/graphql": "^0.9.1",
+      "@types/mongodb": "^2.2.4",
+      "@types/passport": "^0.3.3",
+      "@types/passport-facebook": "^2.1.4"
+    },
+    "dependencies": {
+      "@playlyfe/gql": "^2.3.1",
+      "@types/body-parser": "^1.16.3",
+      "@types/cookie-parser": "^1.3.30",
+      "@types/express-graphql": "^0.0.33",
+      "@types/express-session": "^1.15.0",
+      "@types/mongodb": "^2.2.4",
+      "@types/react": "^15.0.29",
+      "@types/react-dom": "^15.5.0",
+      "@types/redis": "^2.6.0",
+      "body-parser": "^1.17.2",
+      "cookie-parser": "^1.4.3",
+      "express": "^4.15.3",
+      "express-graphql": "^0.6.6",
+      "express-session": "^1.15.3",
+      "graphql": "^0.10.1",
+      "graphql-tools": "^1.0.0",
+      "mongodb": "^2.2.28",
+      "passport": "^0.3.2",
+      "passport-facebook": "^2.1.1",
+      "passport-local": "^1.0.0",
+      "react": "^15.6.1",
+      "react-apollo": "^1.4.2",
+      "react-dom": "^15.6.1",
+      "react-router": "^4.1.1",
+      "redis": "^2.7.1",
+      "ts-loader": "^2.1.0",
+      "webpack": "^2.6.1"
+    }
   }
 
 yarn manifest: 
@@ -113,14 +116,7 @@ Lockfile:
       "@types/express" "*"
       "@types/node" "*"
   
-  "@types/express@*":
-    version "4.0.35"
-    resolved "https://registry.yarnpkg.com/@types/express/-/express-4.0.35.tgz#6267c7b60a51fac473467b3c4a02cd1e441805fe"
-    dependencies:
-      "@types/express-serve-static-core" "*"
-      "@types/serve-static" "*"
-  
-  "@types/express@^4.0.36":
+  "@types/express@*", "@types/express@^4.0.36":
     version "4.0.36"
     resolved "https://registry.yarnpkg.com/@types/express/-/express-4.0.36.tgz#14eb47de7ecb10319f0a2fb1cf971aa8680758c2"
     dependencies:
@@ -233,6 +229,10 @@ Lockfile:
   ansi-regex@^2.0.0:
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
+  
+  any-promise@^1.3.0:
+    version "1.3.0"
+    resolved "https://registry.yarnpkg.com/any-promise/-/any-promise-1.3.0.tgz#abc6afeedcea52e809cdc0376aed3ce39635d17f"
   
   anymatch@^1.3.0:
     version "1.3.0"
@@ -2321,7 +2321,7 @@ Lockfile:
     dependencies:
       is-utf8 "^0.2.0"
   
-  strip-json-comments@~2.0.1:
+  strip-json-comments@^2.0.0, strip-json-comments@~2.0.1:
     version "2.0.1"
     resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   
@@ -2384,6 +2384,21 @@ Lockfile:
       enhanced-resolve "^3.0.0"
       loader-utils "^1.0.2"
       semver "^5.0.1"
+  
+  tsconfig-paths@^2.2.0:
+    version "2.2.0"
+    resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-2.2.0.tgz#c76ace7f2c454cd31ca6f72c33876dbae02000e8"
+    dependencies:
+      tsconfig "^5.0.3"
+  
+  tsconfig@^5.0.3:
+    version "5.0.3"
+    resolved "https://registry.yarnpkg.com/tsconfig/-/tsconfig-5.0.3.tgz#5f4278e701800967a8fc383fd19648878f2a6e3a"
+    dependencies:
+      any-promise "^1.3.0"
+      parse-json "^2.2.0"
+      strip-bom "^2.0.0"
+      strip-json-comments "^2.0.0"
   
   tty-browserify@0.0.0:
     version "0.0.0"
