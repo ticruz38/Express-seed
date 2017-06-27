@@ -1,6 +1,6 @@
 export default {
     // the resolver for the subscription type
-    onHelloChange() {
+    onHelloChange(root, args, context) {
         console.log('hello changed')
     }
 }

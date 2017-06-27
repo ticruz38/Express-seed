@@ -13,7 +13,7 @@ app.use(mongoConnect)
 app.use(express.static('public'))
 app.use('/login', login)
 app.use('/graphql', graph)
-// app.use(renderer) // the renderer may not match each request... let's see how it goes
+app.use(renderer) // the renderer may not match each request... let's see how it goes
 
 app.listen(config.PORT)
 console.log('server is listening on port ' + config.PORT)

@@ -4,7 +4,7 @@
   "description": "an express test",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec ts-node index.ts",
+    "start": "yarn run buildSchema && nodemon --exec ts-node index.ts",
     "start:node": "node dist/index.js",
     "build": "tsc",
     "buildSchema": "ts-node graph/schema/buildSchema",
@@ -17,7 +17,8 @@
     "@types/graphql": "^0.9.1",
     "@types/mongodb": "^2.2.4",
     "@types/passport": "^0.3.3",
-    "@types/passport-facebook": "^2.1.4"
+    "@types/passport-facebook": "^2.1.4",
+    "tsconfig-paths": "^2.2.0"
   },
   "dependencies": {
     "@playlyfe/gql": "^2.3.1",
@@ -46,7 +47,6 @@
     "react-dom": "^15.6.1",
     "react-router": "^4.1.1",
     "redis": "^2.7.1",
-    "ts-loader": "^2.1.0",
-    "webpack": "^2.6.1"
+    "ts-loader": "^2.1.0"
   }
 }

@@ -1,6 +1,6 @@
 export default {
     // the resolver for the query type
-    hello() {
+    hello(root, args, context) {
         return 'hello'
     }
 }

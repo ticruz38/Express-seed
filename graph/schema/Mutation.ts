@@ -1,6 +1,6 @@
 export default {
     // the resolver for the mutation type
-    putHello() {
+    putHello(root, args, context) {
         return 'hello world'
     }
 }
